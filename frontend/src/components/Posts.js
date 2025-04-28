@@ -12,8 +12,7 @@ const Posts = () => {
    const [editPostId, setEditPostId] = useState(null);
 
     const token = Cookies.get('token')
-    //let url = '/api/users'
-    let url = 'http://localhost:5000/api/posts'
+    let url = 'https://skygoal-task-assignment-backend.onrender.com/api/posts'
 
     const fetchData = async () => {
         let options = {
@@ -63,9 +62,7 @@ const Posts = () => {
         }
     
         const response = await fetch(url, options)
-        const data = await response.json()
-
-        console.log(data)
+        await response.json()
 
         if (response.ok) {
             fetchData()
@@ -92,10 +89,8 @@ const Posts = () => {
         };
     
         const response = await fetch(`${url}/${editPostId}`, options);
-        const data = await response.json();
-    
-        console.log(data);
-    
+        await response.json();
+        
         if (response.ok) {
             fetchData();
             setTitle('');

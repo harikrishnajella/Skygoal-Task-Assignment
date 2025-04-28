@@ -23,8 +23,7 @@ const Register = () => {
   const handlerForm = async(e) => {
     setIsLoading(true)
     e.preventDefault()
-    //let url = '/api/auth/register'
-    let url = 'http://localhost:5000/api/auth/register'
+    let url = 'https://skygoal-task-assignment-backend.onrender.com/api/auth/register'
 
       const options = {
         method: "POST",

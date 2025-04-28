@@ -8,8 +8,7 @@ const Users = () => {
     const [users, setUsers] = useState([])
 
     const token = Cookies.get('token')
-    //let url = '/api/users'
-    let url = 'http://localhost:5000/api/users'
+    let url = 'https://skygoal-task-assignment-backend.onrender.com/api/users'
 
     const fetchData = async () => {
         let options = {

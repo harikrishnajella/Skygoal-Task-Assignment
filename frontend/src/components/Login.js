@@ -36,8 +36,7 @@ const Login = () => {
     setIsLoading(true)
     e.preventDefault()
 
-    //let url = '/api/auth/login'
-    let url = 'http://localhost:5000/api/auth/login'
+    let url = 'https://skygoal-task-assignment-backend.onrender.com/api/auth/login'
 
     const options = {
       method: "POST",
